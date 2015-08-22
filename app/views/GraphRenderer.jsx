@@ -32,7 +32,7 @@ GraphRenderer = (function(React) {
 	  find: function(haystack, needle) {
 	  if (haystack.name === needle) return haystack;
 	  for (var i = 0; i < haystack.children.length; i ++) {
-	    var result = find(haystack.children[i], needle);
+	    var result = this.find(haystack.children[i], needle);
 	    if (result) return result;
 	  }
 	  return null;
@@ -59,7 +59,7 @@ GraphRenderer = (function(React) {
 		var self = this;
 
 		 var tree = d3.layout.tree()
-			.size([200, 200]);
+			.size([200, 500]);
 
 		var diagonal = d3.svg.diagonal()
 			.projection(function(d) { return [d.y, d.x]; });
@@ -91,7 +91,7 @@ GraphRenderer = (function(React) {
 			  	var new_node = {"name" : "random new node", "children" : []};
 			  	self.find(untouchedData,d.name).children.push(new_node);
 			  	var root_node = _.clone(untouchedData,true);
-			  	this.update({'data':root_node});
+			  	self.update({'data':root_node});
 			  });
 
 			// TODO: hier muss das neue Objekt nach außen gereicht werden

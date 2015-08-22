@@ -27,11 +27,10 @@
       margin-left: 0; }
 
 .graphrenderer {
-  min-height: 17.94427rem;
-  background-color: rgba(0, 0, 0, 0.2); }
+  min-height: 17.94427rem; }
   .graphrenderer .node circle {
     fill: #fff;
-    stroke: steelblue;
+    stroke: blue;
     stroke-width: 3px; }
   .graphrenderer .node text {
     font: 12px sans-serif; }
