@@ -1,4 +1,4 @@
-engine = (function() {
+engine = (function(cards, _) {
 
     function build_card(id) {
         var template = cards[id];
@@ -85,6 +85,9 @@ engine = (function() {
                 state,
                 build_graph(conspiracy)
             );
+        },
+        get_card_deck: function() {
+            return _.shuffle(_.keys(cards));
         }
     };
-})(cards);
+})(cards, _);

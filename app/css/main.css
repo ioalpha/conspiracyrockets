@@ -53,6 +53,9 @@
   width: 17.94427rem;
   padding: 1rem;
   border: 1px solid #000000; }
+  .card.selected {
+    border-color: #3d3;
+    box-shadow: 0 0 10px #3d3; }
 
 .card__title {
   font-size: 1rem; }

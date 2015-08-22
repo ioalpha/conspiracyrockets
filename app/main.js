@@ -1,5 +1,7 @@
-(function(engine, cards, App, React) {
+main = (function(engine, cards, App, React) {
 
-    React.render(React.createElement(App), document.getElementById("app"));
+    return function() {
+        React.render(React.createElement(App), document.getElementById("app"));
+    };
 
 })(engine, cards, App, React)
