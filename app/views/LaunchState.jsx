@@ -8,6 +8,10 @@ LaunchState = (function(React, BarGraph) {
                         <BarGraph total="100" current={this.props.funds} />
                     </div>
                     <div>
+                        <h2>Fuel</h2>
+                        <BarGraph total="100" current={this.props.fuel} />
+                    </div>
+                    <div>
                         <h2>Supplies</h2>
                         <BarGraph total="100" current={this.props.supplies} />
                     </div>

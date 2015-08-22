@@ -1,6 +1,7 @@
 .cardpool {
     @include flex-box;
     justify-content: center;
+    align-items: stretch;
 
     padding: size(0);
 

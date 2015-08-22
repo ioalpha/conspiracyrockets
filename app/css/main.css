@@ -40,6 +40,7 @@
 .cardpool {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   padding: 1rem;
   border: 1px solid #bbb; }
   .cardpool > * {
@@ -49,9 +50,12 @@
       margin-left: 0; }
 
 .card {
-  width: 11.09017rem;
-  height: 6.8541rem;
+  width: 17.94427rem;
+  padding: 1rem;
   border: 1px solid #000000; }
+
+.card__title {
+  font-size: 1rem; }
 
 * {
   box-sizing: border-box; }

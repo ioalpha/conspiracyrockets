@@ -1,6 +1,10 @@
 .card {
-    width: size(5);
-    height: size(4);
+    width: size(6);
+    padding: size(0);
 
     border: 1px solid color(black);
+}
+
+.card__title {
+    font-size: size(0);
 }

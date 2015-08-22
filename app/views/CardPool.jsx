@@ -4,7 +4,7 @@ CardPool = (function(React, Card) {
             return (
                 <div className="cardpool">
                     {this.props.cards.map(function(c, i) {
-                        return <Card name={c} key={i}/>;
+                        return <Card id={c} key={i}/>;
                     })}
                 </div>
             );
