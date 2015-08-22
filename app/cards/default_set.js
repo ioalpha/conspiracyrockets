@@ -1,0 +1,5 @@
+cards = {};
+
+(function(cards){
+    
+})(cards);
