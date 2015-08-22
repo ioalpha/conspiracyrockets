@@ -1,8 +1,6 @@
 .graphrenderer {
     min-height: size(6);
 
-    background-color: rgba(color(black), 0.2);
-
     & .node circle {
           fill: #fff;
           stroke: steelblue;

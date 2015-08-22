@@ -29,14 +29,25 @@ GraphRenderer = (function(React) {
 	    ]
 	  },
 
+	  find: function(haystack, needle) {
+	  if (haystack.name === needle) return haystack;
+	  for (var i = 0; i < haystack.children.length; i ++) {
+	    var result = find(haystack.children[i], needle);
+	    if (result) return result;
+	  }
+	  return null;
+	},
+
       create: function(state){
       	// tbd
+      	var el = this.getDOMNode();
+
       	this.svg = d3.select(this.getDOMNode()).append("svg")
 			.attr("width","100%")
-			.attr("height","100%")
-		  	.append("g")
-		  	.attr("width","100%")
-			.attr("height","100%")
+			.attr("height",el.clientHeight+"px")
+			.append("g")
+			.attr("width","200px")
+			.attr("height","500px")
 			.attr("transform", "translate(100,0)");
 
   		this.update(state);
@@ -44,10 +55,11 @@ GraphRenderer = (function(React) {
 
       update: function(state){
 
-		var el = this.getDOMNode();      	
+		var el = this.getDOMNode();
+		var self = this;
 
 		 var tree = d3.layout.tree()
-			.size([el.clientHeight, el.clientWidth]);
+			.size([200, 200]);
 
 		var diagonal = d3.svg.diagonal()
 			.projection(function(d) { return [d.y, d.x]; });
@@ -77,7 +89,7 @@ GraphRenderer = (function(React) {
 			  .style("fill", "#fff")
 			  .on("click", function(d){
 			  	var new_node = {"name" : "random new node", "children" : []};
-			  	find(untouchedData,d.name).children.push(new_node);
+			  	self.find(untouchedData,d.name).children.push(new_node);
 			  	var root_node = _.clone(untouchedData,true);
 			  	this.update({'data':root_node});
 			  });
@@ -102,10 +114,6 @@ GraphRenderer = (function(React) {
 		  .attr("class", "link")
 		  .attr("d", diagonal);
 
-
-      },
-
-      updateTreeData: function(data){
 
       },
 
