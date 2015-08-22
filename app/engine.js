@@ -32,7 +32,7 @@ engine = (function() {
         return graph;
     }
 
-    function apply_children(card, child_cards) {
+    function apply_children(card, child_cards, state) {
         var i;
         child_cards = child_cards || [];
 
@@ -41,21 +41,20 @@ engine = (function() {
         }
 
         child_cards.forEach(function(child) {
-            card.apply_child(child);
-            apply_children(child.children);
+            card.apply_child(child, state);
+            apply_children(child.children, state);
         });
     }
 
-    function apply_parents(card, parent_card) {
+    function apply_parents(card, parent_card, state) {
         parent_card = parent_card || card.parent;
 
         if (!parent_card) {
             return;
         }
 
-        card.apply_parent(parent_card);
-
-        apply_parents(card, parent_card.parent);
+        card.apply_parent(parent_card, state);
+        apply_parents(card, parent_card.parent, state);
     }
 
     function apply_graph(state, graph) {
