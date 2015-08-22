@@ -85,6 +85,9 @@ engine = (function() {
                 state,
                 build_graph(conspiracy)
             );
+        },
+        get_card_deck: function() {
+            return _.shuffle(_.keys(cards)).filter(function(id){ return id !== "__root"});
         }
     };
 })(cards);
