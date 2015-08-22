@@ -30,7 +30,7 @@
   min-height: 17.94427rem; }
   .graphrenderer .node circle {
     fill: #fff;
-    stroke: blue;
+    stroke: black;
     stroke-width: 3px; }
   .graphrenderer .node text {
     font: 12px sans-serif; }
@@ -54,7 +54,18 @@
 .card {
   width: 17.94427rem;
   padding: 1rem;
-  border: 1px solid #000000; }
+  border: 1px solid #000000;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  padding-bottom: 30px;
+  padding-right: 12px; }
+  .card:nth-child(1) {
+    background-image: url("../img/index.jpeg"); }
+  .card:nth-child(2) {
+    background-image: url("../img/images.png"); }
+  .card:nth-child(3) {
+    background-image: url("../img/apple.png"); }
 
 .card__title {
   font-size: 1rem; }
