@@ -3,12 +3,19 @@
 
     background-color: rgba(color(black), 0.2);
 
-    &::after {
-        content: "Conspiracy Graph Area";
-        display: block;
-        text-align: center;
-        padding-top: size(3);
-        font-style: italic;
-        color: rgba(color(black), 0.3);
+    & .node circle {
+          fill: #fff;
+          stroke: steelblue;
+          stroke-width: 3px;
+    }
+
+    & .node text { 
+        font: 12px sans-serif; 
+    }
+
+    & .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 2px;
     }
 }

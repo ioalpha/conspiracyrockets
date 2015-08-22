@@ -29,13 +29,16 @@
 .graphrenderer {
   min-height: 17.94427rem;
   background-color: rgba(0, 0, 0, 0.2); }
-  .graphrenderer::after {
-    content: "Conspiracy Graph Area";
-    display: block;
-    text-align: center;
-    padding-top: 4.23607rem;
-    font-style: italic;
-    color: rgba(0, 0, 0, 0.3); }
+  .graphrenderer .node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 3px; }
+  .graphrenderer .node text {
+    font: 12px sans-serif; }
+  .graphrenderer .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px; }
 
 .cardpool {
   display: flex;
