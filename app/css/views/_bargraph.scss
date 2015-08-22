@@ -1,0 +1,26 @@
+.bargraph {
+    position: relative;
+    height: size(0);
+
+    overflow: hidden;
+
+    background-color: color(white);
+    border: 1px solid color(black);
+
+    .fill {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 100%;
+        background-color: color(red);
+    }
+
+    &.ok .fill {
+        background-color: color(green);
+    }
+
+    &.smooth .fill {
+        transition: right 200ms ease-out;
+    }
+}

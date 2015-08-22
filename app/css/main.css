@@ -1,9 +1,64 @@
+.bargraph {
+  position: relative;
+  height: 1rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  border: 1px solid #000000; }
+  .bargraph .fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    background-color: #d33; }
+  .bargraph.ok .fill {
+    background-color: #3d3; }
+  .bargraph.smooth .fill {
+    transition: right 200ms ease-out; }
+
+.launchstate {
+  display: flex;
+  padding: 1rem;
+  border: 1px solid #bbb; }
+  .launchstate > * {
+    flex-grow: 1;
+    margin-left: 1rem; }
+    .launchstate > *:first-child {
+      margin-left: 0; }
+
+.graphrenderer {
+  min-height: 17.94427rem;
+  background-color: rgba(0, 0, 0, 0.2); }
+  .graphrenderer::after {
+    content: "Conspiracy Graph Area";
+    display: block;
+    text-align: center;
+    padding-top: 4.23607rem;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.3); }
+
+.cardpool {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #bbb; }
+  .cardpool > * {
+    flex-grow: 0;
+    margin-left: 1rem; }
+    .cardpool > *:first-child {
+      margin-left: 0; }
+
+.card {
+  width: 11.09017rem;
+  height: 6.8541rem;
+  border: 1px solid #000000; }
+
 * {
   box-sizing: border-box; }
 
 html {
-  font-size: 16px;
+  font-size: 14px;
   font-family: Helvetica, Arial, sans-serif;
-  color: #530; }
+  color: #000000; }
 
 /*# sourceMappingURL=main.css.map */

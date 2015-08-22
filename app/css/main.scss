@@ -1,9 +1,19 @@
+@import "vars";
+@import "helpers";
+@import "colors";
+@import "views/bargraph";
+@import "views/launchstate";
+@import "views/graphrenderer";
+@import "views/cardpool";
+@import "views/card";
+
+
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+    font-size: $base-font-size;
     font-family: Helvetica, Arial, sans-serif;
-    color: #530;
+    color: color(black);
 }

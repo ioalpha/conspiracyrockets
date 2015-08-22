@@ -1,0 +1,8 @@
+.cardpool {
+    @include flex-box;
+    justify-content: center;
+
+    padding: size(0);
+
+    border: 1px solid color(grey);
+}

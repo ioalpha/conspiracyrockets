@@ -1,0 +1,5 @@
+.launchstate {
+    @include flex-box(1);
+    padding: size(0);
+    border: 1px solid color(grey);
+}

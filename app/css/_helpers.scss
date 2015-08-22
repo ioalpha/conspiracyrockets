@@ -1,0 +1,23 @@
+@function size($n) {
+    $size: $base-size;
+
+    @if $n > 0 {
+        @for $i from 1 through $n {
+            $size: $size * $phi;
+        }
+    }
+
+    @return $size;
+}
+
+@mixin flex-box($grow: 0) {
+    display: flex;
+
+    > * {
+        flex-grow: $grow;
+        margin-left: size(0);
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

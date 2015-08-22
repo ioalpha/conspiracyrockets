@@ -1,0 +1,14 @@
+.graphrenderer {
+    min-height: size(6);
+
+    background-color: rgba(color(black), 0.2);
+
+    &::after {
+        content: "Conspiracy Graph Area";
+        display: block;
+        text-align: center;
+        padding-top: size(3);
+        font-style: italic;
+        color: rgba(color(black), 0.3);
+    }
+}

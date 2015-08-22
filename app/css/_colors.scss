@@ -1,0 +1,17 @@
+$colors: (
+    white: #ffffff,
+    black: #000000,
+    grey: #bbb,
+    red: #d33,
+    green: #3d3
+);
+
+@function color($name) {
+    $result: map-get($colors, $name);
+
+    @if not $result {
+        $result: $name;
+    }
+
+    @return $result;
+}
