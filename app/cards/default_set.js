@@ -3,6 +3,9 @@ cards = {};
 (function(cards, _){
 
     var set = {
+        __root: {
+            title: "Conspiracy Rocket"
+        },
         children_newton: {
             title: "The Children of Newton",
             description: "Analytical, calculating, computing, dare we say mathematical. The Children of Newton are a force to be reckoned with!",
