@@ -3,8 +3,8 @@ CardPool = (function(React, Card) {
         render: function() {
             return (
                 <div className="cardpool">
-                    {this.props.cards.map(function(c) {
-                        return <Card name={c} />;
+                    {this.props.cards.map(function(c, i) {
+                        return <Card name={c} key={i}/>;
                     })}
                 </div>
             );
